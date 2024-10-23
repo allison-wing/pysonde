@@ -34,6 +34,7 @@ the one above, e.g.
     ds = create_dataset(cfg)
 
 """
+
 import logging
 
 import _helpers as h
@@ -49,7 +50,7 @@ def create_dataset(cfg):
     """
 
     ds = xr.Dataset()
-    # ds = set_global_attrs(cfg, ds)
+    ds = set_global_attrs(cfg, ds)
     ds = set_coords(cfg, ds)
     ds = set_variables(cfg, ds)
     return ds
